@@ -1,0 +1,12 @@
+yum install git -y
+yum install go
+cd /tmp
+wget https://dl.google.com/go/go1.9.4.linux-amd64.tar.gz -q
+tar -xzf go1.9.4.linux-amd64.tar.gz
+mv go /usr/local
+go version
+go env
+cd ~/
+export GOROOT=/usr/local/go; export GOPATH=$HOME/Projects/Proj1; export PATH=$GOPATH/bin:$GOROOT/bin:$PATH;
+go get golang.org/x/crypto/ssh
+go build nbrute.go
